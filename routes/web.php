@@ -17,7 +17,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('meldingController', 'App\Http\Controllers\Auth\melding@index');
+//Route::get('melding', function (){
+//    return view('melding');
+//});
+
+
+Route::resource('melding', App\Http\Controllers\MeldingController::class);
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
