@@ -17,9 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-//Route::get('melding', function (){
-//    return view('melding');
-//});
 
 
 Route::resource('melding', App\Http\Controllers\MeldingController::class);

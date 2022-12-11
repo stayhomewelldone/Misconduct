@@ -19,7 +19,6 @@
                 font-family: 'Nunito', sans-serif;
             }
         </style>
-        test
 
     </head>
     <body class="antialiased">
