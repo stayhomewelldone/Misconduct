@@ -25,4 +25,6 @@ Route::resource('melding', '\App\Http\Controllers\MeldingController');
 
 
 
+
 require __DIR__.'/auth.php';
+
