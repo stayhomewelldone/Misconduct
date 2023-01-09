@@ -13,7 +13,19 @@
 @section('content')
     <h1>Hello</h1>
 
+    <br>
+
+{{--    @foreach($meldingen as $melding)--}}
+{{--        <p>{{$melding->urgency}}</p>--}}
+{{--    @endforeach--}}
+{{--    <br>--}}
+{{--    @if($melding->urgency == "critical")--}}
+{{--        <p>{{$melding->urgency}}</p>--}}
+{{--    @endif--}}
+    <br>
      <a href="{{route('melding.create')}}">Melding maken</a>
+    <a href="{{route('behandelaar.index')}}">Test</a>
+
 </body>
 </html>
 @endsection
