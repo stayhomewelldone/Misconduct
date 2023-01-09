@@ -11,7 +11,7 @@
 <body>
 @extends('layouts.app')
 @section('content')
-    <div class="bg-cover bg-no-repeat bg-center w-full h-full" style="background-image: url('./resources/images/Healthcares 2.0.png')">
+
     <h1>Hello</h1>
     <h1>Kritieke meldingen</h1>
     <div class="overflow-x-auto inline-block flex flex-row">
