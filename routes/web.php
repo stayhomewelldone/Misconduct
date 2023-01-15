@@ -21,18 +21,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::resource('adminNotifications',adminNotificationController::class);
+
 Route::resource('patients', patientController::class);
-Route::resource('adminFiles', adminFileController::class);
-Route::resource('adminProfiles', adminProfileController::class);
 
-
-
-Route::resource('notifications', notificationController::class);
 Route::resource('files', fileController::class);
-Route::resource('profiles', profileController::class);
-Route::resource('settings', settingsController::class);
 
+Route::resource('settings', settingsController::class);
+Route::get('search', [patientController::class, 'search'])->name('search');
 Route::get('/', function () {
     return view('welcome');
 });
@@ -50,4 +45,4 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Auth::routes();
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
