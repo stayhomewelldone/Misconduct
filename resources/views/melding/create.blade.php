@@ -8,13 +8,16 @@
     <title>Melding</title>
     @vite(['resources/css/app.css'])
 </head>
-<body>
-{{--@extends('layouts.app')--}}
-{{--@section('content')--}}
+<body class="bg-accent-dark bg-cover"
+      style="background-image: url({{asset('images/background2.png') }})">
+@extends('layouts.nav')
+@section('content')
+    <section class="flex items-center justify-center h-screen">
     <form action="{{route('melding.store')}}" method="post" enctype="multipart/form-data">
         @csrf
-        <div>
-                <label for="urgency" class="form-label"></label>
+
+        <div class="m-1">
+            <label for="urgency" class="form-label">Urgentie:</label>
             <select name="urgency" id="urgency">
                 <option value="">Kies urgentie</option>
                 <option value="critical">Ernstig</option>
@@ -24,10 +27,10 @@
                 @error('urgency')
                 <span>{{$message}}</span>
                 @enderror
-            </div>
+        </div>
 
-       <div>
-               <label for="category" class="form-label"></label>
+       <div class="m-1">
+               <label for="category" class="form-label">Korte samenvatting:</label>
                <input id="category"
                       type="text"
                       name="category"
@@ -35,10 +38,10 @@
                @error('category')
                <span>{{$message}}</span>
                @enderror
-           </div>
+       </div>
 
-        <div>
-                <label for="issue" class="form-label"></label>
+        <div class="m-1">
+                <label for="issue" class="form-label">Wat is gebeurt?</label>
                 <input id="issue"
                        type="text"
                        name="issue"
@@ -46,10 +49,10 @@
                 @error('issue')
                 <span>{{$message}}</span>
                 @enderror
-            </div>
+        </div>
 
-        <div>
-            <label for="file_path" class="form-label"></label>
+        <div class="m-1">
+            <label for="file_path" class="form-label">Voeg bestand toe:</label>
             <input id="file_path"
                    type="file"
                    name="file_path"
@@ -57,11 +60,17 @@
             @error('file_path')
             <span>{{$message}}</span>
             @enderror
-        </div>
-        <button type="submit" name="submit" class="submit">Stuur Melding</button>
 
-        <a href="{{route('melding.index')}}">Home</a>
+        </div>
+            <button type="submit" class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded ">
+                Maak melding
+            </button>
+
+
+
     </form>
+
+    </section>
 </body>
 </html>
-{{--@endsection--}}
+@endsection

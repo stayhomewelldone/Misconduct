@@ -69,8 +69,10 @@ class MeldingController extends Controller
             ]);
             $melding->save(); // Finally, save the record.
         }
-        return redirect()->route('melding.index');
+        return redirect()->route('behandelaar.index');
     }
+
+
 
 
 }
