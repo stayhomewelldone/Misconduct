@@ -33,11 +33,11 @@
 
                         <a href="{{route("behandelaar.index")}}" class="text-white hover:bg-blue-900 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Meldingen</a>
 
-                        <a href="#" class="text-white hover:bg-blue-900 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Patiënten</a>
+                        <a href="{{route("patients.index")}}" class="text-white hover:bg-blue-900 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Patiënten</a>
 
                         <a href="{{route("afgerond.index")}}" class="text-white hover:bg-blue-900 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Afgeronden Meldingen</a>
 
-                        <a href="#" class="text-white hover:bg-blue-900 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Dossiers</a>
+                        <a href="{{route("files.index")}}" class="text-white hover:bg-blue-900 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Dossiers</a>
 
                         <a href="{{route("melding.create")}}" class="text-white hover:bg-blue-900 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Maak Melding</a>
 
